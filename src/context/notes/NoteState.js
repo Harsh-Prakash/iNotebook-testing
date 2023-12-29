@@ -1,6 +1,5 @@
 import { useState } from "react";
 import NoteContext from "./noteContext";
-import { upload } from "@testing-library/user-event/dist/upload";
 
 const NoteState = (props) => {
   const host = "http://localhost:5000"

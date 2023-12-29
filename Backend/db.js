@@ -1,5 +1,5 @@
 const mongoose=require('mongoose')
-const mongoURI="mongodb://0.0.0.0:27017/iNoteBook"
+const mongoURI="mongodb+srv://Harsh25:Kolkata798@inotebook.qglz8cn.mongodb.net/inotebook"
 const express = require('express')
 const cors = require('cors');
 const app = express()
