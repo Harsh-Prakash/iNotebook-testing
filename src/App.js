@@ -1,5 +1,5 @@
 import React from "react";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { BrowserRouter, Routes, Route,useNavigate } from "react-router-dom";
 import NavBar from "./components/Navbar";
 import Home from "./components/Home";
 import About from "./components/About";
@@ -9,7 +9,7 @@ import Signup from "./components/Signup";
 import Login from "./components/Login";
 import { useState } from "react";
 
-
+const navigate=useNavigate()
 function App() {
   const [alert, setAlert] = useState(null)
   const showAlert = (message, type) => {
@@ -21,7 +21,9 @@ function App() {
       setAlert(null)
     }, 2000)
   }
-
+useEffect(()=>{
+    navigate("/login")
+  })
   return (
     <>
       <NoteState>
