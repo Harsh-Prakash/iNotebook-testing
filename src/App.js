@@ -1,5 +1,5 @@
-import React from "react";
-import { BrowserRouter, Routes, Route,useNavigate } from "react-router-dom";
+import React, { useEffect } from "react";
+import { BrowserRouter, Routes, Route, useNavigate } from "react-router-dom";
 import NavBar from "./components/Navbar";
 import Home from "./components/Home";
 import About from "./components/About";
@@ -9,8 +9,9 @@ import Signup from "./components/Signup";
 import Login from "./components/Login";
 import { useState } from "react";
 
-const navigate=useNavigate()
-function App() {
+
+function App() {const navigate=useNavigate()
+
   const [alert, setAlert] = useState(null)
   const showAlert = (message, type) => {
     setAlert({
@@ -21,13 +22,14 @@ function App() {
       setAlert(null)
     }, 2000)
   }
-useEffect(()=>{
+  useEffect(()=>{
     navigate("/login")
   })
+
   return (
     <>
       <NoteState>
-        <BrowserRouter>
+   
           <NavBar />
           <Alert alert={alert}/>
           <div className="container">
@@ -38,7 +40,7 @@ useEffect(()=>{
               <Route  path="/login" exact={true} index element={<Login showAlert={showAlert}/>} />
             </Routes>
           </div>
-        </BrowserRouter>
+
       </NoteState>
     </>
   );

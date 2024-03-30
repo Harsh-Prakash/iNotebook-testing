@@ -1,10 +1,6 @@
 import React from 'react'
 import { Link, useLocation, useNavigate } from "react-router-dom";
 
-
-
-
-
 const Navbar = () => {
   let navigate = useNavigate()
   const handleLogout = () => {
