@@ -29,7 +29,7 @@ function App() {const navigate=useNavigate()
   return (
     <>
       <NoteState>
-   
+   <BrowserRouter>
           <NavBar />
           <Alert alert={alert}/>
           <div className="container">
@@ -40,7 +40,7 @@ function App() {const navigate=useNavigate()
               <Route  path="/login" exact={true} index element={<Login showAlert={showAlert}/>} />
             </Routes>
           </div>
-
+  </BrowserRouter>
       </NoteState>
     </>
   );
